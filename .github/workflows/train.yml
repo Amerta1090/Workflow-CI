@@ -32,4 +32,5 @@ jobs:
       - name: Run MLflow Project
         run: |
           cd MLProject
-          mlflow run . --no-conda
+          mlflow run . --env-manager=local
+
