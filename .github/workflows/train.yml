@@ -24,8 +24,12 @@ jobs:
         run: |
           pip install mlflow==2.19.0 scikit-learn pandas
 
+      - name: Debug conda path
+        run: |
+          which python
+          which mlflow
+
       - name: Run MLflow Project
         run: |
           cd MLProject
-          mlflow run .
-
+          mlflow run . --no-conda
